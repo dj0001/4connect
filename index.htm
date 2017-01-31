@@ -262,17 +262,7 @@ dropbox.addEventListener("dragenter", dragenter, false);
 dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('sw.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }).catch(function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
+
 
             }
             
@@ -408,5 +398,18 @@ if (n[0]) t=setInterval(function(){werfe(n[i]-1,0); i++; if(i==n.length) clearIn
     <br>
     <a href="javascript:ki();if (autoki=='on') void(aki=color)" title="KI"><div style="background: rgb(0, 0, 255);" id="info" class="box"></div></a>
     &nbsp;<a id="infotext" download="savegame.sgf" style="background-color: white;text-decoration:none;color:black">&nbsp;ist am Zug</a><span id="net" style="background-color: white;"></span>
-    </body>
+<script>
+	if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
+	</body>
     </html>
