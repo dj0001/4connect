@@ -1,6 +1,6 @@
 'use strict';
 
-const version = 'v1.01';
+const version = 'v1.02';
 const staticCachePrefix = '4connect-pd1-static-';
 const staticCacheName = staticCachePrefix + version;
 
@@ -10,7 +10,8 @@ self.addEventListener('install', event => {
             // cache all the static assets required for offline use.
             return cache.addAll([
                 './',
-                'index.htm'
+                'index.htm',
+                'Tic1.wav'
             ]);
         }).then(() => {
             // activate the new service worker immediately, without waiting for next load.
